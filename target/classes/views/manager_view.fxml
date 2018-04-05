@@ -1,0 +1,700 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXSpinner?>
+<?import com.jfoenix.controls.JFXTimePicker?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="pane" prefHeight="902.0" prefWidth="1321.0" stylesheets="@managercss.css" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="clg.ahmedalansary.busstation.ManagerViewController">
+	<children>
+      <AnchorPane id="main" onMousePressed="#closeApp" prefHeight="900.0" prefWidth="1350.0" style="-fx-opacity: 1;" stylesheets="@managercss.css" />
+		<Label fx:id="welcomingLabel" alignment="CENTER" layoutX="282.0" layoutY="14.0" prefHeight="65.0" prefWidth="913.0" textFill="#ddd6d6">
+			<font>
+				<Font name="Monospaced Bold" size="18.0" />
+			</font>
+		</Label>
+				<AnchorPane layoutX="248.0" layoutY="79.0" prefHeight="799.0" prefWidth="995.0">
+					<children>
+            <JFXSpinner fx:id="spinner" layoutX="450.0" layoutY="250.0" visible="false" />
+						<VBox fx:id="newEmployeeBox" layoutX="19.0" layoutY="27.0" prefHeight="790.0" prefWidth="986.0" spacing="45.0" style="-fx-background-color: white; -fx-background-radius: 20px; -fx-border-radius: 20px; -fx-border-color: black; -fx-border-width: 2px;" visible="false">
+							<children>
+								<Label alignment="CENTER" prefHeight="93.0" prefWidth="953.0" style="-fx-text-fill: black;" text="Account Details">
+									<font>
+										<Font name="System Bold" size="36.0" />
+									</font>
+								</Label>
+								<HBox prefHeight="60.0" prefWidth="990.0" spacing="10.0">
+									<children>
+										<Label alignment="CENTER" prefHeight="101.0" prefWidth="138.0" style="-fx-text-fill: black;" text="Name">
+											<font>
+												<Font name="Monospaced Bold" size="18.0" />
+											</font>
+										</Label>
+                        <Label alignment="CENTER" prefHeight="39.0" prefWidth="47.0" text="">
+                           <font>
+                              <Font name="FontAwesome Regular" size="22.0" />
+                           </font>
+                        </Label>
+										<TextField fx:id="accountNameInput" prefHeight="71.0" prefWidth="359.0" stylesheets="@managercss.css" />
+										<Label alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="101.0" prefWidth="138.0" style="-fx-text-fill: black;" text="Age">
+											<font>
+												<Font name="Monospaced Bold" size="18.0" />
+											</font>
+										</Label>
+                        <Label alignment="CENTER" layoutX="164.0" layoutY="20.0" prefHeight="39.0" prefWidth="47.0" text="">
+                           <font>
+                              <Font name="FontAwesome Regular" size="22.0" />
+                           </font>
+                        </Label>
+										<TextField fx:id="accountAgeInput" layoutX="148.0" layoutY="10.0" prefHeight="54.0" prefWidth="107.0" stylesheets="@managercss.css" />
+									</children>
+									<padding>
+										<Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+									</padding>
+								</HBox>
+								<HBox layoutX="10.0" layoutY="10.0" prefHeight="60.0" prefWidth="990.0" spacing="10.0">
+									<children>
+										<Label alignment="CENTER" prefHeight="101.0" prefWidth="138.0" style="-fx-text-fill: black;" text="Phone Number">
+											<font>
+												<Font name="Monospaced Bold" size="18.0" />
+											</font>
+										</Label>
+                        <Label alignment="CENTER" prefHeight="39.0" prefWidth="47.0" text="">
+                           <font>
+                              <Font name="FontAwesome Regular" size="22.0" />
+                           </font>
+                        </Label>
+										<TextField fx:id="accountPhoneInput" prefHeight="71.0" prefWidth="359.0" stylesheets="@managercss.css" />
+									</children>
+									<padding>
+										<Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+									</padding>
+								</HBox>
+								<HBox layoutX="10.0" layoutY="64.0" prefHeight="60.0" prefWidth="990.0" spacing="10.0">
+									<children>
+										<Label alignment="CENTER" prefHeight="101.0" prefWidth="138.0" style="-fx-text-fill: black;" text="ID">
+											<font>
+												<Font name="Monospaced Bold" size="18.0" />
+											</font>
+										</Label>
+                        <Label alignment="CENTER" prefHeight="39.0" prefWidth="47.0" text="">
+                           <font>
+                              <Font name="FontAwesome Regular" size="22.0" />
+                           </font>
+                        </Label>
+										<TextField fx:id="accountIdInput" prefHeight="34.0" prefWidth="345.0" stylesheets="@managercss.css" />
+									</children>
+									<padding>
+										<Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+									</padding>
+								</HBox>
+								<HBox layoutX="10.0" layoutY="118.0" prefHeight="56.0" prefWidth="966.0" spacing="10.0">
+									<children>
+										<Label alignment="CENTER" prefHeight="101.0" prefWidth="138.0" style="-fx-text-fill: black;" text="Work_ID">
+											<font>
+												<Font name="Monospaced Bold" size="18.0" />
+											</font>
+										</Label>
+                        <Label alignment="CENTER" prefHeight="39.0" prefWidth="47.0" text="">
+                           <font>
+                              <Font name="FontAwesome Regular" size="22.0" />
+                           </font>
+                        </Label>
+										<TextField fx:id="accountWorkIdInput" prefHeight="46.0" prefWidth="140.0" stylesheets="@managercss.css" />
+                        <JFXComboBox fx:id="accountTypeComboBox" prefHeight="53.0" prefWidth="279.0" promptText="Type" />
+									</children>
+									<padding>
+										<Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+									</padding>
+								</HBox>
+								<HBox layoutX="10.0" layoutY="172.0" prefHeight="60.0" prefWidth="990.0" spacing="10.0">
+									<children>
+										<Label alignment="CENTER" prefHeight="101.0" prefWidth="138.0" style="-fx-text-fill: black;" text="Work_Pass">
+											<font>
+												<Font name="Monospaced Bold" size="18.0" />
+											</font>
+										</Label>
+                        <Label alignment="CENTER" prefHeight="39.0" prefWidth="47.0" text="">
+                           <font>
+                              <Font name="FontAwesome Regular" size="22.0" />
+                           </font>
+                        </Label>
+										<PasswordField fx:id="accountWorkPassInput" prefHeight="71.0" prefWidth="359.0" stylesheets="@managercss.css" />
+									</children>
+									<padding>
+										<Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+									</padding>
+								</HBox>
+								<Button mnemonicParsing="false" onAction="#addNewAccount" prefHeight="89.0" prefWidth="254.0" stylesheets="@button.css" text="Confirm">
+									<VBox.margin>
+										<Insets left="350.0" top="15.0" />
+									</VBox.margin>
+									<font>
+										<Font name="Monospaced Bold" size="18.0" />
+									</font>
+								</Button>
+							</children>
+							<padding>
+								<Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+							</padding>
+						</VBox>
+						<VBox fx:id="viewEmployeesBox" layoutX="19.0" layoutY="27.0" prefHeight="790.0" prefWidth="986.0" spacing="10.0" style="-fx-background-color: white; -fx-background-radius: 20px; -fx-border-radius: 20px; -fx-border-color: black; -fx-border-width: 2px;" visible="false">
+							<children>
+								<Label alignment="CENTER" prefHeight="93.0" prefWidth="953.0" style="-fx-text-fill: black;" text="Employees">
+									<font>
+										<Font name="System Bold" size="36.0" />
+									</font>
+								</Label>
+								<Button mnemonicParsing="false" onAction="#refreshEmployeesListView" prefHeight="55.0" prefWidth="129.0" style="-fx-background-radius: 10px; -fx-border-radius: 10px;" stylesheets="@button.css" text="Refresh">
+									<VBox.margin>
+										<Insets left="850.0" />
+									</VBox.margin>
+									<font>
+										<Font name="Monospaced Bold" size="16.0" />
+									</font>
+								</Button>
+								<ListView fx:id="employeesListView" prefHeight="507.0" prefWidth="966.0" style="-fx-border-radius: 10px;" stylesheets="@list.css">
+									<VBox.margin>
+										<Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+									</VBox.margin>
+								</ListView>
+							</children>
+							<padding>
+								<Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+							</padding>
+						</VBox>
+						<VBox fx:id="newTripBoxFrame" layoutX="19.0" layoutY="27.0" prefHeight="790.0" prefWidth="986.0" spacing="25.0" style="-fx-background-color: white; -fx-background-radius: 20px; -fx-border-radius: 20px; -fx-border-color: black; -fx-border-width: 2px;" visible="false">
+							<children>
+								<Label alignment="CENTER" prefHeight="93.0" prefWidth="953.0" style="-fx-text-fill: black;" text="New Trip Information">
+									<font>
+										<Font name="System Bold" size="36.0" />
+									</font>
+								</Label>
+								<HBox prefHeight="75.0" prefWidth="966.0" spacing="15.0">
+									<children>
+										<Label alignment="CENTER" prefHeight="50.0" prefWidth="83.0" text="Origins">
+											<font>
+												<Font name="Monospaced Regular" size="16.0" />
+											</font>
+										</Label>
+										<TextField fx:id="tripFromTF" prefHeight="46.0" prefWidth="265.0" stylesheets="@managercss.css" />
+										<Label alignment="CENTER" prefHeight="50.0" prefWidth="117.0" text="Destination">
+											<font>
+												<Font name="Monospaced Regular" size="16.0" />
+											</font>
+										</Label>
+										<TextField fx:id="tripToTF" layoutX="118.0" layoutY="20.0" prefHeight="46.0" prefWidth="265.0" stylesheets="@managercss.css" />
+										<Button alignment="CENTER" mnemonicParsing="false" onAction="#getTripDistDura" prefHeight="51.0" prefWidth="123.0" stylesheets="@button.css" text="Confirm">
+											<font>
+												<Font name="Monospaced Bold" size="16.0" />
+											</font>
+										</Button>
+									</children>
+									<padding>
+										<Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+									</padding>
+								</HBox>
+								<HBox layoutX="20.0" layoutY="123.0" prefHeight="66.0" prefWidth="966.0" spacing="15.0">
+									<children>
+										<Label alignment="CENTER" prefHeight="82.0" prefWidth="145.0" text="Distance :">
+											<font>
+												<Font name="Monospaced Regular" size="16.0" />
+											</font>
+											<HBox.margin>
+												<Insets left="150.0" />
+											</HBox.margin>
+										</Label>
+										<Label fx:id="tripDistanceLabel" layoutX="10.0" layoutY="10.0" prefHeight="82.0" prefWidth="145.0">
+											<font>
+												<Font name="Monospaced Regular" size="14.0" />
+											</font>
+										</Label>
+										<Label alignment="CENTER" layoutX="155.0" layoutY="10.0" prefHeight="82.0" prefWidth="145.0" text="Duration :">
+											<font>
+												<Font name="Monospaced Regular" size="16.0" />
+											</font>
+										</Label>
+										<Label fx:id="tripDurationLabel" layoutX="300.0" layoutY="10.0" prefHeight="82.0" prefWidth="145.0">
+											<font>
+												<Font name="Monospaced Regular" size="14.0" />
+											</font>
+										</Label>
+									</children>
+									<padding>
+										<Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+									</padding>
+								</HBox>
+								<HBox prefHeight="60.0" prefWidth="964.0" spacing="20.0">
+									<children>
+										<Label alignment="CENTER" prefHeight="52.0" prefWidth="88.0" text="Trip ID ">
+											<HBox.margin>
+												<Insets left="150.0" />
+											</HBox.margin>
+											<font>
+												<Font name="Monospaced Regular" size="14.0" />
+											</font>
+										</Label>
+										<TextField fx:id="tripIdTF" prefHeight="54.0" prefWidth="254.0" stylesheets="@managercss.css" />
+										<Button fx:id="checkIdBtn" mnemonicParsing="false" onAction="#checkTripID" prefHeight="55.0" prefWidth="148.0" stylesheets="@button.css" text="Check" visible="false" />
+									</children>
+								</HBox>
+								<HBox layoutX="20.0" layoutY="233.0" prefHeight="79.0" prefWidth="966.0" spacing="15.0">
+									<children>
+										<Label alignment="CENTER" prefHeight="50.0" prefWidth="83.0" text="Date">
+											<HBox.margin>
+												<Insets left="5.0" />
+											</HBox.margin>
+											<font>
+												<Font name="Monospaced Regular" size="16.0" />
+											</font>
+										</Label>
+                        <JFXDatePicker fx:id="datePicker" defaultColor="#001d94" editable="false" prefHeight="41.0" prefWidth="287.0" />
+										<Label alignment="CENTER" prefHeight="54.0" prefWidth="147.0" text="Departure Time">
+											<font>
+												<Font name="Monospaced Regular" size="16.0" />
+											</font>
+										</Label>
+                        <JFXTimePicker fx:id="timePicker" defaultColor="#001d94" prefHeight="45.0" prefWidth="260.0" />
+									</children>
+									<VBox.margin>
+										<Insets />
+									</VBox.margin>
+									<padding>
+										<Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+									</padding>
+								</HBox>
+								<HBox layoutX="20.0" layoutY="388.0" prefHeight="81.0" prefWidth="966.0" spacing="15.0">
+									<children>
+										<Label alignment="CENTER" prefHeight="65.0" prefWidth="92.0" text="Stops :">
+											<HBox.margin>
+												<Insets left="5.0" />
+											</HBox.margin>
+											<font>
+												<Font name="Monospaced Regular" size="16.0" />
+											</font>
+										</Label>
+										<TextField fx:id="tripStopsTF" prefHeight="56.0" prefWidth="270.0" stylesheets="@managercss.css" />
+										<Button fx:id="addNewStopToTripBtn" alignment="CENTER" mnemonicParsing="false" onAction="#addNewStopToTrip" prefHeight="59.0" prefWidth="155.0" stylesheets="@button.css" text="Add" visible="false">
+											<font>
+												<Font name="Monospaced Bold" size="16.0" />
+											</font>
+										</Button>
+										<Label alignment="CENTER" prefHeight="56.0" prefWidth="135.0" text="Type :">
+											<font>
+												<Font name="Monospaced Regular" size="16.0" />
+											</font>
+										</Label>
+                        <JFXComboBox fx:id="tripTypeCB" prefHeight="56.0" prefWidth="176.0" />
+									</children>
+									<padding>
+										<Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+									</padding>
+								</HBox>
+								<HBox layoutX="20.0" layoutY="513.0" prefHeight="223.0" prefWidth="966.0" spacing="15.0">
+									<padding>
+										<Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+									</padding>
+									<children>
+										<VBox prefHeight="169.0" prefWidth="941.0" spacing="5.0">
+											<children>
+												<Label alignment="CENTER" prefHeight="36.0" prefWidth="93.0" style="-fx-border-color: black;" text="Trip Info." />
+												<HBox prefHeight="48.0" prefWidth="931.0" spacing="5.0" style="-fx-border-color: black;">
+													<children>
+														<VBox prefHeight="78.0" prefWidth="265.0">
+															<children>
+																<HBox prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+																	<children>
+																		<Label alignment="CENTER" prefHeight="35.0" prefWidth="75.0" text="From">
+																			<font>
+																				<Font name="Monospaced Regular" size="14.0" />
+																			</font>
+																		</Label>
+																		<Label fx:id="tripFromLabel" prefHeight="35.0" prefWidth="126.0">
+																			<font>
+																				<Font name="Monospaced Regular" size="14.0" />
+																			</font>
+																		</Label>
+																	</children>
+																	<padding>
+																		<Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+																	</padding>
+																</HBox>
+															</children>
+														</VBox>
+														<Label alignment="CENTER" layoutX="85.0" layoutY="10.0" prefHeight="35.0" prefWidth="75.0" text="To">
+															<font>
+																<Font name="Monospaced Regular" size="14.0" />
+															</font>
+														</Label>
+														<Label fx:id="tripToLabel" layoutX="160.0" layoutY="10.0" prefHeight="35.0" prefWidth="124.0">
+															<font>
+																<Font name="Monospaced Regular" size="14.0" />
+															</font>
+														</Label>
+														<Label layoutX="310.0" layoutY="10.0" prefHeight="35.0" prefWidth="136.0" text="Number of Stops">
+															<font>
+																<Font name="Monospaced Regular" size="14.0" />
+															</font>
+														</Label>
+														<Label fx:id="tripStopsLabel" layoutX="385.0" layoutY="10.0" prefHeight="35.0" prefWidth="102.0">
+															<font>
+																<Font name="Monospaced Regular" size="14.0" />
+															</font>
+														</Label>
+													</children>
+												</HBox>
+												<Button fx:id="submitTripBtn" alignment="CENTER" mnemonicParsing="false" onAction="#submitTrip" prefHeight="103.0" prefWidth="182.0" stylesheets="@button.css" text="Submit" visible="false">
+													<font>
+														<Font name="Monospaced Bold" size="16.0" />
+													</font>
+													<VBox.margin>
+														<Insets left="350.0" />
+													</VBox.margin>
+												</Button>
+											</children>
+											<padding>
+												<Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+											</padding>
+										</VBox>
+									</children>
+								</HBox>
+							</children>
+							<padding>
+								<Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+							</padding>
+						</VBox>
+						<VBox fx:id="viewTripsBox" layoutX="19.0" layoutY="27.0" prefHeight="790.0" prefWidth="986.0" spacing="10.0" style="-fx-background-color: white; -fx-background-radius: 20px; -fx-border-radius: 20px; -fx-border-color: black; -fx-border-width: 2px;">
+							<children>
+								<Label alignment="CENTER" prefHeight="93.0" prefWidth="953.0" style="-fx-text-fill: black;" text="Trips">
+									<font>
+										<Font name="System Bold" size="36.0" />
+									</font>
+								</Label>
+								<HBox prefHeight="49.0" prefWidth="966.0">
+									<children>
+										<Button mnemonicParsing="false" onAction="#refreshTripsListView" prefHeight="49.0" prefWidth="152.0" style="-fx-border-color: black; -fx-border-radius: 10px; -fx-background-radius: 10px;" stylesheets="@button.css" text="Refresh">
+											<font>
+												<Font name="Monospaced Bold" size="16.0" />
+											</font>
+											<HBox.margin>
+												<Insets left="800.0" />
+											</HBox.margin>
+										</Button>
+									</children>
+								</HBox>
+								<ListView fx:id="tripsListView" prefHeight="507.0" prefWidth="966.0" style="-fx-border-radius: 10px;" stylesheets="@list.css">
+									<VBox.margin>
+										<Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+									</VBox.margin>
+								</ListView>
+                  <HBox prefHeight="100.0" prefWidth="200.0" spacing="550.0">
+                     <children>
+                        <JFXButton onAction="#deleteTrip" prefHeight="81.0" prefWidth="200.0" stylesheets="@button.css" text="Delete Trip" />
+                        <Button mnemonicParsing="false" onAction="#viewTripPassengers" prefHeight="87.0" prefWidth="189.0" stylesheets="@button.css" text="View Passengers">
+                           <font>
+                              <Font name="Monospaced Bold" size="16.0" />
+                           </font>
+                        </Button>
+                     </children>
+                     <padding>
+                        <Insets left="50.0" />
+                     </padding>
+                  </HBox>
+							</children>
+							<padding>
+								<Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+							</padding>
+						</VBox>
+						<VBox fx:id="newVehicleBox" layoutX="19.0" layoutY="27.0" prefHeight="799.0" prefWidth="986.0" spacing="46.0" style="-fx-background-color: white; -fx-background-radius: 20px; -fx-border-radius: 20px; -fx-border-color: black; -fx-border-width: 2px;" visible="false">
+							<children>
+								<Label alignment="CENTER" prefHeight="93.0" prefWidth="953.0" style="-fx-text-fill: black;" text="Vehicle Information">
+									<font>
+										<Font name="System Bold" size="36.0" />
+									</font>
+								</Label>
+								<HBox prefHeight="480.0" prefWidth="974.0">
+									<children>
+										<VBox prefHeight="480.0" prefWidth="451.0" spacing="30.0">
+											<children>
+												<HBox prefHeight="54.0" prefWidth="480.0" spacing="10.0">
+													<children>
+														<Label alignment="CENTER" prefHeight="101.0" prefWidth="138.0" style="-fx-text-fill: black;" text="Brand">
+															<font>
+																<Font name="Monospaced Bold" size="18.0" />
+															</font>
+														</Label>
+                                    <JFXComboBox fx:id="vehicleBrandsCB" prefHeight="49.0" prefWidth="220.0" />
+													</children>
+													<padding>
+														<Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+													</padding>
+												</HBox>
+												<HBox prefHeight="60.0" prefWidth="453.0" spacing="10.0">
+													<padding>
+														<Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+													</padding>
+													<children>
+														<Label alignment="CENTER" prefHeight="101.0" prefWidth="138.0" style="-fx-text-fill: black;" text="Type">
+															<font>
+																<Font name="Monospaced Bold" size="18.0" />
+															</font>
+														</Label>
+                                    <JFXComboBox fx:id="vehicleTypeCB" prefHeight="52.0" prefWidth="221.0" />
+													</children>
+												</HBox>
+												<HBox prefHeight="59.0" prefWidth="452.0" spacing="10.0">
+													<children>
+														<Label alignment="CENTER" prefHeight="101.0" prefWidth="138.0" style="-fx-text-fill: black;" text="Licence">
+															<font>
+																<Font name="Monospaced Bold" size="18.0" />
+															</font>
+														</Label>
+														<TextField fx:id="vehicleLicenceTF" prefHeight="42.0" prefWidth="221.0" stylesheets="@managercss.css" />
+													</children>
+													<padding>
+														<Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+													</padding>
+												</HBox>
+												<Button mnemonicParsing="false" onAction="#addNewVehicle" prefHeight="69.0" prefWidth="243.0" stylesheets="@button.css" text="Confirm">
+													<VBox.margin>
+														<Insets left="90.0" top="15.0" />
+													</VBox.margin>
+													<font>
+														<Font name="Monospaced Bold" size="18.0" />
+													</font>
+												</Button>
+											</children>
+										</VBox>
+										<AnchorPane fx:id="newVehicleImagePane" prefHeight="480.0" prefWidth="514.0" />
+									</children>
+								</HBox>
+							</children>
+							<padding>
+								<Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+							</padding>
+						</VBox>
+						<VBox fx:id="LinkDriverToVehicleBox" layoutX="19.0" layoutY="27.0" prefHeight="790.0" prefWidth="986.0" spacing="10.0" style="-fx-background-color: white; -fx-background-radius: 20px; -fx-border-radius: 20px; -fx-border-color: black; -fx-border-width: 2px;" visible="false">
+							<children>
+								<Label alignment="CENTER" prefHeight="93.0" prefWidth="953.0" style="-fx-text-fill: black;" text="Add Driver to Vehicle">
+									<font>
+										<Font name="System Bold" size="36.0" />
+									</font>
+								</Label>
+								<HBox prefHeight="49.0" prefWidth="966.0">
+									<children>
+										<Button mnemonicParsing="false" onAction="#refreshVehicleDriverListViews" prefHeight="49.0" prefWidth="152.0" style="-fx-border-color: black; -fx-border-radius: 10px; -fx-background-radius: 10px;" stylesheets="@button.css" text="Refresh">
+											<font>
+												<Font name="Monospaced Bold" size="16.0" />
+											</font>
+											<HBox.margin>
+												<Insets left="800.0" />
+											</HBox.margin>
+										</Button>
+									</children>
+								</HBox>
+								<HBox prefHeight="416.0" prefWidth="966.0">
+									<children>
+										<VBox prefHeight="416.0" prefWidth="485.0">
+											<children>
+												<Label prefHeight="63.0" prefWidth="64.0" text="Vehicles" />
+												<ListView fx:id="vehiclesListView" onMouseClicked="#onVehicleSelected" prefHeight="416.0" prefWidth="489.0" stylesheets="@list.css" />
+											</children>
+										</VBox>
+										<VBox layoutX="10.0" layoutY="10.0" prefHeight="416.0" prefWidth="485.0">
+											<children>
+												<Label prefHeight="63.0" prefWidth="64.0" text="Drivers" />
+												<ListView fx:id="driversListView" onMouseClicked="#onDriverSelected" prefHeight="416.0" prefWidth="489.0" stylesheets="@list.css" />
+											</children>
+										</VBox>
+									</children>
+								</HBox>
+								<HBox prefHeight="162.0" prefWidth="966.0">
+									<children>
+										<VBox prefHeight="162.0" prefWidth="299.0">
+											<children>
+												<Label alignment="CENTER" prefHeight="73.0" prefWidth="301.0" text="Selected Vehicle" />
+												<Label fx:id="selectedVehicleLabel" alignment="CENTER" prefHeight="89.0" prefWidth="312.0" />
+											</children>
+										</VBox>
+										<VBox layoutX="10.0" layoutY="10.0" prefHeight="162.0" prefWidth="299.0">
+											<children>
+												<Label alignment="CENTER" prefHeight="73.0" prefWidth="301.0" text="Selected Driver" />
+												<Label fx:id="selectedDriverLabel" alignment="CENTER" prefHeight="89.0" prefWidth="312.0" />
+											</children>
+										</VBox>
+										<Button mnemonicParsing="false" onAction="#linkDriverToVehicle" prefHeight="161.0" prefWidth="366.0" style="-fx-font-size: 36;" stylesheets="@button.css" text="Link">
+											<font>
+												<Font size="36.0" />
+											</font>
+										</Button>
+									</children>
+								</HBox>
+							</children>
+							<padding>
+								<Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+							</padding>
+						</VBox>
+            <VBox fx:id="LinkVehicleToTripBox" layoutX="19.0" layoutY="27.0" prefHeight="790.0" prefWidth="986.0" spacing="10.0" style="-fx-background-color: white; -fx-background-radius: 20px; -fx-border-radius: 20px; -fx-border-color: black; -fx-border-width: 2px;" visible="false">
+               <children>
+                  <Label alignment="CENTER" prefHeight="93.0" prefWidth="953.0" style="-fx-text-fill: black;" text="Add Vehicle to Trip">
+                     <font>
+                        <Font name="System Bold" size="36.0" />
+                     </font>
+                  </Label>
+                  <HBox prefHeight="49.0" prefWidth="966.0">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#refreshVehicleTripListViews" prefHeight="49.0" prefWidth="152.0" style="-fx-border-color: black; -fx-border-radius: 10px; -fx-background-radius: 10px;" stylesheets="@button.css" text="Refresh">
+                           <font>
+                              <Font name="Monospaced Bold" size="16.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="800.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="416.0" prefWidth="966.0">
+                     <children>
+                        <VBox prefHeight="416.0" prefWidth="485.0">
+                           <children>
+                              <Label prefHeight="63.0" prefWidth="64.0" text="Trips" />
+                              <ListView fx:id="tripsLinkingListView" onMouseClicked="#onTripLinkingSelected" prefHeight="416.0" prefWidth="489.0" stylesheets="@list.css" />
+                           </children>
+                        </VBox>
+                        <VBox layoutX="10.0" layoutY="10.0" prefHeight="416.0" prefWidth="485.0">
+                           <children>
+                              <Label prefHeight="63.0" prefWidth="64.0" text="Vehicles" />
+                              <ListView fx:id="vehiclesLinkingListView" onMouseClicked="#onVehicleLinkingSelected" prefHeight="416.0" prefWidth="489.0" stylesheets="@list.css" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="162.0" prefWidth="966.0">
+                     <children>
+                        <VBox prefHeight="162.0" prefWidth="299.0">
+                           <children>
+                              <Label alignment="CENTER" prefHeight="73.0" prefWidth="301.0" text="Selected Trip" />
+                              <Label fx:id="selectedTripLinkLabel" alignment="CENTER" prefHeight="89.0" prefWidth="312.0" />
+                           </children>
+                        </VBox>
+                        <VBox layoutX="10.0" layoutY="10.0" prefHeight="162.0" prefWidth="299.0">
+                           <children>
+                              <Label alignment="CENTER" prefHeight="73.0" prefWidth="301.0" text="Selected Vehicle" />
+                              <Label fx:id="selectedVehicleLinkLabel" alignment="CENTER" prefHeight="89.0" prefWidth="312.0" />
+                           </children>
+                        </VBox>
+                        <Button mnemonicParsing="false" onAction="#linkVehicleToTrip" prefHeight="161.0" prefWidth="366.0" style="-fx-font-size: 36;" stylesheets="@button.css" text="Link">
+                           <font>
+                              <Font size="36.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </HBox>
+               </children>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </VBox>
+            <VBox fx:id="passengersBox" layoutX="19.0" layoutY="27.0" prefHeight="790.0" prefWidth="986.0" spacing="10.0" style="-fx-background-color: white; -fx-background-radius: 20px; -fx-border-radius: 20px; -fx-border-color: black; -fx-border-width: 2px;" visible="false">
+               <children>
+                  <Label fx:id="tripPassengersLabel" alignment="CENTER" prefHeight="93.0" prefWidth="953.0" style="-fx-text-fill: black;" text="Trip">
+                     <font>
+                        <Font name="System Bold" size="36.0" />
+                     </font>
+                  </Label>
+                  <ListView fx:id="tripsPassengersListView" prefHeight="507.0" prefWidth="966.0" style="-fx-border-radius: 10px;" stylesheets="@list.css">
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </VBox.margin>
+                  </ListView>
+                  <JFXButton onAction="#returnToViewTrips" prefHeight="115.0" prefWidth="212.0" stylesheets="@button.css" text="Back">
+                     <VBox.margin>
+                        <Insets left="750.0" />
+                     </VBox.margin>
+                  </JFXButton>
+               </children>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </VBox>
+					</children>
+				</AnchorPane>
+      <AnchorPane layoutX="1150.0" prefHeight="73.0" prefWidth="200.0">
+         <children>
+            <Label alignment="CENTER" layoutX="100.0" layoutY="10.0" onMousePressed="#closeApp" prefHeight="32.0" prefWidth="53.0" style="-fx-text-fill: black;" text="">
+               <font>
+                  <Font name="FontAwesome Regular" size="44.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutY="10.0" onMousePressed="#back" prefHeight="32.0" prefWidth="53.0" style="-fx-text-fill: black;" text="">
+               <font>
+                  <Font name="FontAwesome Regular" size="44.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+		<VBox layoutX="14.0" layoutY="14.0" prefHeight="850.0" prefWidth="234.0" spacing="15.0" style="-fx-background-color: transparent;">
+			<children>
+				<Label alignment="CENTER" prefHeight="79.0" prefWidth="286.0" style="-fx-background-radius: 10px; -fx-border-radius: 10px; -fx-border-color: black; -fx-text-fill: black;" text="Options">
+					<font>
+						<Font name="Monospaced Bold Italic" size="36.0" />
+					</font>
+				</Label>
+				<Button mnemonicParsing="false" onAction="#viewNewEmployeeBox" prefHeight="80.0" prefWidth="220.0" stylesheets="@button.css" text="New Employee">
+					<font>
+						<Font name="Monospaced Bold" size="14.0" />
+					</font>
+				</Button>
+				<Button layoutX="10.0" layoutY="89.0" mnemonicParsing="false" onAction="#viewNewTripBox" prefHeight="80.0" prefWidth="220.0" stylesheets="@button.css" text="New Trip">
+					<font>
+						<Font name="Monospaced Bold" size="14.0" />
+					</font>
+				</Button>
+				<Button layoutX="20.0" layoutY="210.0" mnemonicParsing="false" onAction="#viewNewVehicleBox" prefHeight="80.0" prefWidth="220.0" stylesheets="@button.css" text="New Vehicle">
+					<font>
+						<Font name="Monospaced Bold" size="14.0" />
+					</font>
+				</Button>
+				<Button layoutX="10.0" layoutY="170.0" mnemonicParsing="false" onAction="#viewLinkVehicleToTripBox" prefHeight="80.0" prefWidth="220.0" stylesheets="@button.css" text="Link Vehicle To Trip">
+					<font>
+						<Font name="Monospaced Bold" size="14.0" />
+					</font>
+				</Button>
+				<Button layoutX="10.0" layoutY="413.0" mnemonicParsing="false" onAction="#viewLinkDriverToVehicleBox" prefHeight="80.0" prefWidth="220.0" stylesheets="@button.css" text="Link Driver to Vehicle">
+					<font>
+						<Font name="Monospaced Bold" size="14.0" />
+					</font>
+				</Button>
+				<Button layoutX="10.0" layoutY="332.0" mnemonicParsing="false" onAction="#viewAllTrips" prefHeight="80.0" prefWidth="220.0" stylesheets="@button.css" text="View Trips">
+					<font>
+						<Font name="Monospaced Bold" size="14.0" />
+					</font>
+				</Button>
+				<Button layoutX="10.0" layoutY="494.0" mnemonicParsing="false" onAction="#viewMyEmployees" prefHeight="80.0" prefWidth="220.0" stylesheets="@button.css" text="View Employees">
+					<font>
+						<Font name="Monospaced Bold" size="14.0" />
+					</font>
+				</Button>
+				<Button layoutX="10.0" layoutY="251.0" mnemonicParsing="false" prefHeight="80.0" prefWidth="220.0" stylesheets="@button.css" text="Modify Account">
+					<font>
+						<Font name="Monospaced Bold" size="14.0" />
+					</font>
+				</Button>
+			</children>
+			<padding>
+				<Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+			</padding>
+		</VBox>
+	</children>
+</AnchorPane>

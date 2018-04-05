@@ -1,0 +1,60 @@
+#main{
+	-fx-background-image: url("img.jpg");
+    -fx-background-repeat: stretch;   
+    -fx-background-size: 1330 900;
+    -fx-background-position: center center;
+    -fx-effect: dropshadow(three-pass-box, black, 30, 1, 0, 0); 
+	
+}
+#pane{
+	-fx-background-image: url("backg.jpg");
+    -fx-background-repeat: stretch;   
+    -fx-background-size: 1330 900;
+    -fx-background-position: center center;
+    -fx-effect: dropshadow(three-pass-box, black, 30, 1, 0, 0); 
+	
+	
+}
+.text-field {
+    -fx-background-color: #a9a9a9 , skyblue , white;
+    -fx-background-insets: 0 -1 -1 -1, 0 0 0 0, 0 -1 3 -1;
+     -fx-pref-width: 300;
+    -fx-pref-height: 60;
+    -fx-opacity : 0.7;
+    
+}
+
+.text-field:focused {
+    -fx-background-color: #a9a9a9 , blue , white;
+    -fx-background-insets: 0 -1 -1 -1, 0 0 0 0, 0 -1 3 -1;
+}
+.combo-box{
+    -fx-background-color: white;
+    -fx-opacity : 0.5;
+    -fx-border-color: black;
+}
+.combo-box.arrow,
+.combo-box.arrow-button{
+    -fx-background-color: blue;
+}
+
+
+/* this part is from  default stiles fxrt.jar!/com/sun/javafx/scene/control/skin/caspian/caspian.css */
+.combo-box:hover{
+    -fx-background-color: -fx-shadow-highlight-color, -fx-outer-border, -fx-inner-border, -fx-body-color;
+    -fx-background-radius: 5, 5, 4, 3;
+    -fx-background-insets: 0 0 -1 0, 0, 1, 2;
+    -fx-padding: 0;
+}
+
+.combo-box:showing > .arrow-button {
+    -fx-color: -fx-pressed-base;
+}
+
+/* ------- ARROW* ------- */
+.combo-box:hover > .arrow-button > .arrow{
+    -fx-background-insets: 1 0 -1 0, 0;
+    -fx-background-color: -fx-mark-highlight-color, -fx-mark-color;
+    -fx-padding: 0.166667em 0.333333em 0.166667em 0.333333em; /* 2 4 2 4 */
+    -fx-shape: "M 0 0 h 7 l -3.5 4 z";
+}

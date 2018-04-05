@@ -1,0 +1,15 @@
+#imagePane{
+    -fx-background-image: url("backg.jpg");
+    -fx-background-repeat: stretch;   
+    -fx-background-size: 940 590;
+    -fx-background-position: center center;
+    -fx-effect: dropshadow(three-pass-box, black, 30, 0.5, 0, 0); 
+
+}
+#busimg{
+	 -fx-background-image: url("bus.jpg");  	
+    -fx-background-size: 659 563;
+    -fx-background-position: center center;
+}
+#user{
+}

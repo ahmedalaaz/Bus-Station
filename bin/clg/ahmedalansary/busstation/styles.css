@@ -1,0 +1,6 @@
+#pane{
+    -fx-background-image: url("bus_station.jpg");
+    -fx-background-repeat: stretch;   
+    -fx-background-size: 990 890;
+    -fx-background-position: center center;
+}

@@ -1,0 +1,58 @@
+#mainPane{
+	
+	-fx-background-image: url("backg.jpg");
+    -fx-background-repeat: stretch;   
+    -fx-background-size: 1200 900;
+    -fx-background-position: center center;
+    -fx-effect: dropshadow(three-pass-box, black, 30, 0.5, 0, 0); 
+}
+#temp{
+	-fx-background-image: url("img.jpg");
+    -fx-background-repeat: stretch;   
+    -fx-background-size: 1200 900;
+    -fx-background-position: center center;
+    -fx-effect: dropshadow(three-pass-box, black, 30, 0.5, 0, 0); 
+}
+#ticketimg{
+	-fx-background-image: url("bus.jpg");
+    -fx-background-repeat: stretch;   
+    -fx-background-size: 590 390;
+    -fx-background-position: center center;
+    -fx-effect: dropshadow(three-pass-box, black, 30, 0.5, 0, 0); 
+}
+#ticket{
+-fx-background-color: linear-gradient(to right, #003973, #e5e5be); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	
+}
+#solid{
+	-fx-background-image: url("solidbg.jpg");
+    -fx-background-repeat: stretch;   
+    -fx-background-size: 1177 715;
+    -fx-background-position: center center;
+}
+
+.list-cell:filled:selected:focused, .list-cell:filled:selected {
+    -fx-background-color: linear-gradient(#328BDB 0%, #207BCF 25%, #1973C9 75%, #4682B4 100%);
+    -fx-text-fill: black;
+}
+
+.list-cell:even { /* <=== changed to even */
+    -fx-background-color: white;
+}
+.list-cell{
+		-fx-font-weight: bold;
+	
+}
+
+.list-cell:filled:hover {
+    -fx-background-color: #0093ff;
+    -fx-text-fill: black;
+}
+#listPane{
+	-fx-background-image: url("bus.jpg");
+    -fx-background-repeat: stretch;   
+    -fx-background-size: 490 557;
+    -fx-opacity:0.5;
+    -fx-background-position: center center;
+    -fx-effect: dropshadow(three-pass-box, black, 30, 0.5, 0, 0); 
+}
